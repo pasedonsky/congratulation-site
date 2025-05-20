@@ -7,6 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Нужно поймать летающий подарок -->
+<div id="present" onclick="catchPresent()">🎁</div>
+<p>Поймай подарок!</p>
+<p id="score">0</p>
+
+<script>
+let score = 0;
+function catchPresent() {
+  score++;
+  document.getElementById('score').textContent = score;
+  movePresent();
+}
+
+function movePresent() {
+  const present = document.getElementById('present');
+  present.style.left = Math.random() * 80 + 'vw';
+  present.style.top = Math.random() * 80 + 'vh';
+}
+
+// Подарок убегает каждые 2 секунды
+setInterval(movePresent, 2000);
+</script>
     <div class="container">
         <h1>🎉 Поздравляю,моя Мирослава! 🎉</h1>
         <p>Я тебя очень люблю и поздравляю,с 21 летием но душой всегда 16.</p>
@@ -15,17 +37,5 @@
         <div class="confetti"></div>
     </div>
     <script src="script.js"></script>
-    <!-- При наведении на текст - он "убегает" -->
-<p class="runaway-text" 
-   onmouseover="this.style.transform='translateX('+(Math.random()*200-100)+'px)'">
-  Попробуй поймать поздравление!
-</p>
-
-<style>
-.runaway-text {
-  transition: transform 0.3s;
-  cursor: pointer;
-}
-</style>
 </body>
 </html>
