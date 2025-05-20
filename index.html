@@ -16,26 +16,4 @@
     </div>
     <script src="script.js"></script>
 </body>
-<!-- Нужно поймать летающий подарок -->
-<div id="present" onclick="catchPresent()">🎁</div>
-<p>Поймай подарок!</p>
-<p id="score">0</p>
-
-<script>
-let score = 0;
-function catchPresent() {
-  score++;
-  document.getElementById('score').textContent = score;
-  movePresent();
-}
-
-function movePresent() {
-  const present = document.getElementById('present');
-  present.style.left = Math.random() * 80 + 'vw';
-  present.style.top = Math.random() * 80 + 'vh';
-}
-
-// Подарок убегает каждые 2 секунды
-setInterval(movePresent, 2000);
-</script>
 </html>
