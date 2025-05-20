@@ -46,3 +46,27 @@ button:hover {
     pointer-events: none;
     z-index: 1000;
 }
+
+.congratulation-card {
+  background: rgba(255, 255, 255, 0.9); /* полупрозрачный белый */
+  border-radius: 15px; /* скругленные углы */
+  padding: 30px;
+  max-width: 500px; /* ширина таблички */
+  text-align: center; /* выравнивание текста */
+  margin: 0 auto; /* центрирование по горизонтали */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* тень */
+  
+  /* Центрирование по вертикали */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Для мобильных устройств */
+@media (max-width: 600px) {
+  .congratulation-card {
+    width: 90%;
+    padding: 20px;
+  }
+}
