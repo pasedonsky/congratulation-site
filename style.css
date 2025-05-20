@@ -1,5 +1,5 @@
 body {
-  background-image: url("congratulation-site/assets/images/background.jpg");
+  background-image: url("../assets/images/background.jpg");
   background-size: cover;       /* растягивает на весь экран */
   background-position: center;  /* центрирует изображение */
   background-attachment: fixed; /* фиксирует фон при прокрутке */
