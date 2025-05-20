@@ -15,5 +15,17 @@
         <div class="confetti"></div>
     </div>
     <script src="script.js"></script>
+    <!-- При наведении на текст - он "убегает" -->
+<p class="runaway-text" 
+   onmouseover="this.style.transform='translateX('+(Math.random()*200-100)+'px)'">
+  Попробуй поймать поздравление!
+</p>
+
+<style>
+.runaway-text {
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+</style>
 </body>
 </html>
