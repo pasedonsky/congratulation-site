@@ -70,3 +70,22 @@ button:hover {
     padding: 20px;
   }
 }
+
+<div class="congratulation-card">
+  <img src="assets/icons/gift.svg" width="60" alt="Подарок">
+  <h2>Поздравляю!</h2>
+  ...
+</div>
+
+.congratulation-card {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -40%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+<button class="close-btn" onclick="this.parentElement.style.display='none'">
+  ×
+</button>
